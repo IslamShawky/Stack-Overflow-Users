@@ -24,13 +24,13 @@ class UsersResponseModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    if (this.users != null) {
-      data['items'] = this.users!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (users != null) {
+      data['items'] = users!.map((v) => v.toJson()).toList();
     }
-    data['has_more'] = this.hasMore;
-    data['quota_max'] = this.quotaMax;
-    data['quota_remaining'] = this.quotaRemaining;
+    data['has_more'] = hasMore;
+    data['quota_max'] = quotaMax;
+    data['quota_remaining'] = quotaRemaining;
     return data;
   }
 }
@@ -106,29 +106,29 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    if (this.badgeCounts != null) {
-      data['badge_counts'] = this.badgeCounts!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (badgeCounts != null) {
+      data['badge_counts'] = badgeCounts!.toJson();
     }
-    data['account_id'] = this.accountId;
-    data['is_employee'] = this.isEmployee;
-    data['last_modified_date'] = this.lastModifiedDate;
-    data['last_access_date'] = this.lastAccessDate;
-    data['reputation_change_year'] = this.reputationChangeYear;
-    data['reputation_change_quarter'] = this.reputationChangeQuarter;
-    data['reputation_change_month'] = this.reputationChangeMonth;
-    data['reputation_change_week'] = this.reputationChangeWeek;
-    data['reputation_change_day'] = this.reputationChangeDay;
-    data['reputation'] = this.reputation;
-    data['creation_date'] = this.creationDate;
-    data['user_type'] = this.userType;
-    data['user_id'] = this.userId;
-    data['accept_rate'] = this.acceptRate;
-    data['location'] = this.location;
-    data['website_url'] = this.websiteUrl;
-    data['link'] = this.link;
-    data['profile_image'] = this.profileImage;
-    data['display_name'] = this.displayName;
+    data['account_id'] = accountId;
+    data['is_employee'] = isEmployee;
+    data['last_modified_date'] = lastModifiedDate;
+    data['last_access_date'] = lastAccessDate;
+    data['reputation_change_year'] = reputationChangeYear;
+    data['reputation_change_quarter'] = reputationChangeQuarter;
+    data['reputation_change_month'] = reputationChangeMonth;
+    data['reputation_change_week'] = reputationChangeWeek;
+    data['reputation_change_day'] = reputationChangeDay;
+    data['reputation'] = reputation;
+    data['creation_date'] = creationDate;
+    data['user_type'] = userType;
+    data['user_id'] = userId;
+    data['accept_rate'] = acceptRate;
+    data['location'] = location;
+    data['website_url'] = websiteUrl;
+    data['link'] = link;
+    data['profile_image'] = profileImage;
+    data['display_name'] = displayName;
     return data;
   }
 }
@@ -147,10 +147,10 @@ class BadgeCounts {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    data['bronze'] = this.bronze;
-    data['silver'] = this.silver;
-    data['gold'] = this.gold;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['bronze'] = bronze;
+    data['silver'] = silver;
+    data['gold'] = gold;
     return data;
   }
 }
